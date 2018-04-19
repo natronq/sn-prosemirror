@@ -1,0 +1,75 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel=stylesheet href="dist/editor.css">
+</head>
+
+<body>
+  <style>
+    #editor,
+    .editor {
+      background: white;
+      color: black;
+      background-clip: padding-box;
+      border-radius: 4px;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      padding: 5px 0;
+      margin-bottom: 23px;
+    }
+
+    .ProseMirror p:first-child,
+    .ProseMirror h1:first-child,
+    .ProseMirror h2:first-child,
+    .ProseMirror h3:first-child,
+    .ProseMirror h4:first-child,
+    .ProseMirror h5:first-child,
+    .ProseMirror h6:first-child {
+      margin-top: 10px;
+    }
+
+
+    .ProseMirror p {
+      margin-bottom: 1em
+    }
+
+    .ProseMirror {
+      padding: 4px 8px 4px 14px;
+      line-height: 1.2;
+      outline: none;
+      height: 120px;
+      overflow-y: auto;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box
+    }
+
+    textarea {
+      width: 100%;
+      height: 123px;
+      border: 1px solid silver;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      padding: 3px 10px;
+      border: none;
+      outline: none;
+      font-family: inherit;
+      font-size: inherit
+    }
+
+    .ProseMirror-menubar-wrapper,
+    #markdown textarea {
+      display: block;
+      margin-bottom: 4px
+    }
+  </style>
+
+  <div id="editor" style="margin-bottom: 0"></div>
+
+  <div style="display: none">
+    <textarea id="content">This is a comment written in [Markdown](http://commonmark.org). *You* may know the syntax for inserting a link, but does your whole audience?&#13;&#13;So you can give people the **choice** to use a more familiar, discoverable interface.</textarea>
+  </div>
+
+  <script src="dist/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "sn-prosemirror",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "npm": "^5.8.0",
+    "prosemirror-commands": "^1.0.0",
+    "prosemirror-example-setup": "^1.0.0",
+    "prosemirror-history": "^1.0.0",
+    "prosemirror-inputrules": "^1.0.0",
+    "prosemirror-keymap": "^1.0.0",
+    "prosemirror-gapcursor": "^1.0.0",
+    "prosemirror-markdown": "^1.0.0",
+    "prosemirror-menu": "^1.0.0",
+    "prosemirror-model": "^1.0.0",
+    "prosemirror-schema-basic": "^1.0.0",
+    "prosemirror-schema-list": "^1.0.0",
+    "prosemirror-state": "^1.0.0",
+    "prosemirror-transform": "^1.0.0",
+    "prosemirror-view": "^1.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.14"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack"
+  },
+  "author": "",
+  "license": "ISC"
+}
