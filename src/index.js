@@ -1,22 +1,3 @@
-// MarkdownView{
-class MarkdownView {
-  constructor(target, content) {
-    this.textarea = target.appendChild(document.createElement('textarea'))
-    this.textarea.value = content
-  }
-
-  get content() {
-    return this.textarea.value
-  }
-  focus() {
-    this.textarea.focus()
-  }
-  destroy() {
-    this.textarea.remove()
-  }
-}
-// }
-
 // ProseMirrorView{
 import { EditorView } from 'prosemirror-view'
 import { EditorState } from 'prosemirror-state'
@@ -26,6 +7,7 @@ import {
   defaultMarkdownSerializer
 } from 'prosemirror-markdown'
 import { exampleSetup } from 'prosemirror-example-setup'
+import { ComponentManager } from 'sn-components-api'
 
 class ProseMirrorView {
   constructor(target, content) {
@@ -50,7 +32,6 @@ class ProseMirrorView {
 // }
 
 document.addEventListener('DOMContentLoaded', function(event) {
-  var place = document.querySelector('#editor')
   var workingNote
   var view
 
@@ -74,7 +55,14 @@ document.addEventListener('DOMContentLoaded', function(event) {
       return
     }
 
-    view = new ProseMirrorView(place, note.content.text)
+    if (view) {
+      view.destroy()
+    }
+
+    view = new ProseMirrorView(
+      document.querySelector('#editor'),
+      note.content.text
+    )
   })
 
   editor.addEventListener('input', function(event) {

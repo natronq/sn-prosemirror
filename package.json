@@ -18,7 +18,8 @@
     "prosemirror-schema-list": "^1.0.0",
     "prosemirror-state": "^1.0.0",
     "prosemirror-transform": "^1.0.0",
-    "prosemirror-view": "^1.0.0"
+    "prosemirror-view": "^1.0.0",
+    "sn-components-api": "^1.0.245"
   },
   "devDependencies": {
     "webpack": "^4.6.0",
